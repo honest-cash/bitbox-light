@@ -1,4 +1,4 @@
-import BIP39 from "bip39"
+import BIP39 from "bip39-english"
 import randomBytes from "randombytes"
 import Bitcoin from "bitcoincashjs-lib"
 const Buffer = require("safe-buffer").Buffer
