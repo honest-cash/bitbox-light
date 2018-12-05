@@ -1,4 +1,8 @@
-# BITBOX SDK
+# BITBOX Light
+This is a fork of Bitbox SDK. It is a lightweight version of the library. Customer applications normally do not utilize many of the features that Bitbox offers. It is important for such applications to load fast and be responsive. This version of Bitbox is cut with funtionality that is enough to support <a href="https://honest.cash">Honest.Cash</a>. This package is used in <a href="https://www.npmjs.com/package/simple-bitcoin-wallet">simple-bitcoin-wallet</a>.
+
+# Size savings
+* Mnemonics are generated only from English wordlist. All other languages have been removed.
 
 `bitbox-sdk` is a utility for creating great [Bitcoin Cash](https://www.bitcoincash.org) applications. If can be used from the command line or from within client/server apps.
 

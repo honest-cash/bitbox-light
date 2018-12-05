@@ -1,8 +1,8 @@
 {
-  "name": "bitbox-sdk",
+  "name": "bitbox-light",
   "version": "2.2.6",
-  "description": "BITBOX Javascript SDK for Bitcoin Cash",
-  "author": "Gabriel Cardona @ Bitcoin.com",
+  "description": "BITBOX Javascript SDK (Light version) for Bitcoin Cash used at Honest.Cash",
+  "author": "Adrian Barwicki @ Honest.Cash",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha --timeout 30000 --require babel-core/register",
@@ -19,7 +19,7 @@
   "homepage": "https://developer.bitcoin.com/bitbox",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bitcoin-com/bitbox-javascript-sdk.git"
+    "url": "git+https://github.com/honest-cash/bitbox-light.git"
   },
   "dependencies": {
     "assert": "^1.4.1",
