@@ -1,6 +1,6 @@
 {
   "name": "bitbox-light",
-  "version": "2.2.6",
+  "version": "2.3.6",
   "description": "BITBOX Javascript SDK (Light version) for Bitcoin Cash used at Honest.Cash",
   "author": "Adrian Barwicki @ Honest.Cash",
   "main": "index.js",
