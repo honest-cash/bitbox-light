@@ -1,6 +1,6 @@
 import Bitcoin from "bitcoincashjs-lib"
 import sb from "satoshi-bitcoin"
-import bitcoinMessage from "bitcoinjs-message"
+// import bitcoinMessage from "bitcoinjs-message"
 import bs58 from "bs58"
 import bip21 from "bip21"
 import coininfo from "coininfo"
@@ -53,6 +53,7 @@ class BitcoinCash {
   // }
 
   // sign message
+  /**
   signMessageWithPrivKey(privateKeyWIF, message) {
     const network = privateKeyWIF.charAt(0) === "c" ? "testnet" : "bitcoincash"
     let bitcoincash
@@ -70,6 +71,7 @@ class BitcoinCash {
       .toString("base64")
   }
 
+
   // verify message
   verifyMessage(address, signature, message) {
     return bitcoinMessage.verify(
@@ -78,6 +80,7 @@ class BitcoinCash {
       signature
     )
   }
+  */
 
   // encode base58Check
   encodeBase58Check(hex) {

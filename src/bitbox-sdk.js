@@ -17,7 +17,7 @@ import TransactionBuilder from "./TransactionBuilder"
 import ECPair from "./ECPair"
 import Script from "./Script"
 import Price from "./Price"
-import Socket from "./Socket"
+// import Socket from "./Socket"
 import Wallet from "./Wallet"
 
 class BITBOXSDK {
@@ -46,7 +46,7 @@ class BITBOXSDK {
     this.TransactionBuilder = TransactionBuilder
     this.TransactionBuilder.setAddress(this.Address)
     this.Util = new Util(this.restURL)
-    this.Socket = Socket
+    // this.Socket = Socket
     this.Wallet = Wallet
   }
 }

@@ -1,6 +1,7 @@
 import Bitcoin from "bitcoincashjs-lib"
 import coininfo from "coininfo"
-import bip32utils from "bip32-utils"
+// bip32-utils is 144.66M!
+// import bip32utils from "bip32-utils"
 
 class HDNode {
   constructor(address) {
@@ -100,7 +101,7 @@ class HDNode {
   fromBase58(base58, network) {
     return Bitcoin.HDNode.fromBase58(base58, network)
   }
-
+  /**
   createAccount(hdNodes) {
     const arr = hdNodes.map(
       (item, index) => new bip32utils.Chain(item.neutered())
@@ -111,6 +112,7 @@ class HDNode {
   createChain(hdNode) {
     return new bip32utils.Chain(hdNode)
   }
+  */
 }
 
 export default HDNode

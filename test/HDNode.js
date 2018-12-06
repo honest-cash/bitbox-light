@@ -244,40 +244,6 @@ describe("#HDNode", () => {
     })
   })
 
-  describe("#bip32", () => {
-    describe("create accounts and addresses", () => {
-      fixtures.accounts.forEach(fixture => {
-        const seedBuffer = BITBOX.Mnemonic.toSeed(fixture.mnemonic)
-        const hdNode = BITBOX.HDNode.fromSeed(seedBuffer)
-        const a = BITBOX.HDNode.derivePath(hdNode, "0'")
-        const external = BITBOX.HDNode.derivePath(a, "0")
-        const account = BITBOX.HDNode.createAccount([external])
-
-        it(`#createAccount`, () => {
-          assert.notEqual(account, null)
-        })
-
-        describe("#getChainAddress", () => {
-          const external1 = BITBOX.Address.toCashAddress(
-            account.getChainAddress(0)
-          )
-          it(`should create external change address ${external1}`, () => {
-            assert.equal(external1, fixture.externals[0])
-          })
-        })
-
-        describe("#nextChainAddress", () => {
-          for (let i = 0; i < 4; i++) {
-            const ex = BITBOX.Address.toCashAddress(account.nextChainAddress(0))
-            it(`should create external change address ${ex}`, () => {
-              assert.equal(ex, fixture.externals[i + 1])
-            })
-          }
-        })
-      })
-    })
-  })
-
   describe("#sign", () => {
     fixtures.sign.forEach(fixture => {
       it(`should sign 32 byte hash buffer`, () => {
